@@ -12,7 +12,7 @@ class BasicServices
       String url = "${BasicData.BASE_URL}/donchain/v1/$userProfile/getToken?org=Org2MSP";
       Response response = await get(Uri.parse(url));
       Map<String, dynamic> data = jsonDecode(response.body) as Map<String, dynamic>;
-      token = data["Value"] as String;
+      token = (data["Value"] as int).toString();
     }
     catch(ex)
     {
