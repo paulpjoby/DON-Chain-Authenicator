@@ -18,6 +18,8 @@ class BasicServices
     {
       return null;
     }
+
+    return token;
   }
 
   static Future<bool> createAuthRequest(String userProfile, String token) async
